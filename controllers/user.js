@@ -1,40 +1,20 @@
-import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+import { collection, addDoc } from "firebase/firestore"; 
 import { auth } from "../firebaseConfig";
-const provider = new GoogleAuthProvider();
 //login
-export const login = async () => {
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+export const handleLogin = async (email, password) => {
+    const response=signInWithEmailAndPassword(auth, email, password)
+    .then((response) => response)
+    .catch((error) => error);
 };
 //logout
 
 //sigin
-export const handleSignIn =(type) => {
-    console.log("first")
-    signInWithPopup(auth, provider)
-    .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      // IdP data available using getAdditionalUserInfo(result)
-      // ...
-    }).catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      // ...
-    });
+export const handleSignIn = (type, email, password) => {
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((response) => console.log(response))
+    .catch((error) => console.error(error));
 };

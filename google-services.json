@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "158153359323",
+    "project_id": "bitshackathon-fe0e0",
+    "storage_bucket": "bitshackathon-fe0e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158153359323:android:4d5451c5d462a3583771fe",
+        "android_client_info": {
+          "package_name": "com.anonymous.BitsHackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158153359323-ho9tajgghfc712plb0s581r1gbe9d7o3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmlYjwGafRn2JIVQ9MgTEyKK2CwFRxUus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158153359323-ho9tajgghfc712plb0s581r1gbe9d7o3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

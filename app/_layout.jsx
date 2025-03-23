@@ -9,7 +9,7 @@ const MainLayout = () => {
       <Stack.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Login In",
         }}
       />
       <Stack.Screen
@@ -18,6 +18,7 @@ const MainLayout = () => {
           title: "Sign In",
         }}
       />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 };
